@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let text = prompt("Mời nhập vaò chuỗi chữ và số ")
+    let arrText = text.split("")
+    for(let i=0;i<arrText.length;i++){
+        if(arrText[i]%1==0){
+            arrText.splice(i,1)
+            i--
+        }
+    }
+    let result = arrText.join("")
+    console.log(result)
+    alert(`chuỗi kí tự không có số là: ${result}`)
+    </script>
+</body>
+</html>

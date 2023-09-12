@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let text = prompt("Mời nhập vaò chuỗi các phần tử")
+    let arrText = text.split(" ")
+    console.log(arrText);
+    let c = []
+    for(let i=0;i<arrText.length;i++){
+        let a = arrText[i].split("")
+        a.reverse()
+        let b = a.join("")
+        c.push(b)
+    }
+    let result = c.join(" ")
+    alert(`chuỗi mơí sau khi đảo: ${result}`)
+    console.log(result);
+   </script>
+</body>
+</html>

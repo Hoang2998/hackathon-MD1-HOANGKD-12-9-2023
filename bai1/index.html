@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = prompt("Mời nhập 5 chữ số nguyên phân cách nhau bằng dấu cách")
+        let arrNumber = numbers.split(" ")
+        console.log(arrNumber);
+        let result = Array.from(new Set(arrNumber))
+        console.log(result);
+        let count = 0
+        for(let i=0;i<result.length;i++){
+            for(let j=0;j<arrNumber.length;j++){
+                if(result[i] == arrNumber[j]){
+                    count += 1;
+                }
+            }
+            if(count>1){
+                result.splice(i,1)
+                i--;
+            }
+            count = 0
+        } 
+        console.log(result)
+        let max = result[0]
+        for(let i =0;i<result.length;i++){
+            if(max < result[i]){
+                max = result[i]
+            }
+        }
+        alert(`số lớn nhât và duy nhất là: ${max}`)
+    </script>
+</body>
+</html>
